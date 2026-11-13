@@ -1,0 +1,19 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Server-side form/API endpoints are not public content pages.
+Disallow: /php/
+
+Sitemap: https://ashvamedh.in/sitemap.xml

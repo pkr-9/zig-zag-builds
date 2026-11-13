@@ -1,0 +1,38 @@
+#############################################
+# No Directory Browsing
+#############################################
+
+Options -Indexes
+
+#############################################
+# Disable PHP Execution
+#############################################
+
+<FilesMatch "\.(php|php3|php4|php5|php7|php8|phtml|phar)$">
+    Require all denied
+</FilesMatch>
+
+#############################################
+# Block Script Files
+#############################################
+
+<FilesMatch "\.(cgi|pl|py|jsp|asp|aspx|sh)$">
+    Require all denied
+</FilesMatch>
+
+#############################################
+# Allow Only Resume Files
+#############################################
+
+<FilesMatch "\.(pdf|doc|docx)$">
+    Require all granted
+</FilesMatch>
+
+#############################################
+# Force Download
+#############################################
+
+<IfModule mod_headers.c>
+Header set Content-Disposition attachment
+Header set X-Content-Type-Options nosniff
+</IfModule>

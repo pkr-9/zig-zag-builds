@@ -1,0 +1,1 @@
+import{x as e}from"./primitives-BXtnwZDE.js";import{M as t,i as n}from"./index-BJemNX4B.js";var r=e(),i=()=>(0,r.jsx)(n,{service:t});export{i as component};

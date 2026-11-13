@@ -1,0 +1,66 @@
+# Disable directory indexing and content negotiation
+Options -Indexes -MultiViews
+
+# CRITICAL FOR SEO: Prevents Apache from auto-redirecting /services to /services/
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # ------------------------------------------------------------
+    # 1. PHP endpoints bypass
+    # ------------------------------------------------------------
+    RewriteRule ^php/ - [L]
+
+    # ------------------------------------------------------------
+    # 2. SEO: Force Clean URLs (Strip .html from direct requests)
+    # Redirects /about.html -> /about
+    # ------------------------------------------------------------
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
+    RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+    # ------------------------------------------------------------
+    # 3. SEO: Enforce Canonical URLs (Strip trailing slashes)
+    # Redirects /services/ -> /services (Except the root domain)
+    # ------------------------------------------------------------
+    RewriteCond %{REQUEST_URI} !^/$RewriteRule ^(.*)/+$ /$1 [R=301,L]
+
+    # ------------------------------------------------------------
+    # 4. Serve existing physical files directly (CSS, JS, images)
+    # Note: We removed the `-d` condition so directories are ignored
+    # ------------------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # ------------------------------------------------------------
+    # 5. Map Clean URLs to physical .html files silently
+    # Maps /services/tenderlink -> /services/tenderlink.html
+    # Maps /services -> /services.html
+    # ------------------------------------------------------------
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^(.*)$ /$1.html [L]
+
+    # ------------------------------------------------------------
+    # 6. Root Fallback
+    # ------------------------------------------------------------
+    RewriteRule ^$ /index.html [L]
+
+    # ------------------------------------------------------------
+    # 7. Return 404 instead of falling back to homepage
+    # ------------------------------------------------------------
+    RewriteRule ^ - [R=404,L]
+</IfModule>
+
+<FilesMatch "^(\\.env|composer\\.(json|lock)|package(-lock)?\\.json|yarn\\.lock|pnpm-lock\\.yaml|README.*|LICENSE.*)$">
+    Require all denied
+</FilesMatch>
+
+RedirectMatch 403 /\\..*$
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

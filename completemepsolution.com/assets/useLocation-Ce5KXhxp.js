@@ -1,0 +1,1 @@
+import{b as t,c as e,e as s}from"./Match-vmcM-y0b.js";function a(r){const o=t();return e(o.stores.location,s(r,o))}export{a as u};

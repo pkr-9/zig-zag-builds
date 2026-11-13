@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Utility / transaction pages
+Disallow: /thank-you
+Disallow: /api/
+
+# Keep internal/static implementation paths out of search
+Disallow: /src/
+Disallow: /node_modules/
+
+# Canonical XML sitemap
+Sitemap: https://completemepsolution.com/sitemap.xml

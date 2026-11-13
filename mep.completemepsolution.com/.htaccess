@@ -1,0 +1,19 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. ALWAYS ALLOW AUTOSSL VALIDATION FIRST
+  RewriteRule ^\.well-known/acme-challenge/ - [L]
+
+  # 2. Redirect HTTP to HTTPS & Canonical Hostname
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^mep\.completemepsolution\.com$ [NC]
+  RewriteRule ^ https://mep.completemepsolution.com%{REQUEST_URI} [R=301,L]
+
+  # 3. Clean URLs for .html files
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>

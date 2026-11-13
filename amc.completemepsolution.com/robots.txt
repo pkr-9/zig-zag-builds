@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://amc.completemepsolution.com/sitemap.xml
+

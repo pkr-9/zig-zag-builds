@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mauli Multiservices - Vehicle Insurance & RTO Services Latur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a5caa;
+            --secondary: #f9a826;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --marathi-font: 'Noto Sans Devanagari', sans-serif;
+            --english-font: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--english-font);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f5f7fb;
+        }
+
+        .marathi {
+            font-family: var(--marathi-font);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3d7c 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background-color: #e69500;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        /* Vehicle Types */
+        .vehicle-types {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        .vehicles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .vehicle-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .vehicle-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .vehicle-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+
+        .feature:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-10px);
+        }
+
+        .feature:hover .feature-icon,
+        .feature:hover h4 {
+            color: white;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .feature h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: var(--english-font);
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 92, 170, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h4, .footer-services h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after, .footer-services h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links ul, .footer-services ul {
+            list-style: none;
+        }
+
+        .footer-links li, .footer-services li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a, .footer-services a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover, .footer-services a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Action Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .call-btn {
+            background-color: var(--primary);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* AI Chatbot */
+        .ai-chatbot {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 350px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            display: none;
+            overflow: hidden;
+        }
+
+        .chatbot-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h4 {
+            font-size: 1.2rem;
+        }
+
+        .close-chatbot {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chatbot-body {
+            padding: 20px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color: var(--primary);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Customer Reviews */
+        .reviews {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .review-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+        }
+
+        .review-card {
+            min-width: 350px;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .review-rating {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* RTO Symbols */
+        .rto-symbols {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .rto-symbol {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                z-index: 999;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav li {
+                margin-bottom: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .ai-chatbot {
+                width: 300px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .service-card, .contact-info, .contact-form {
+                padding: 25px 20px;
+            }
+            
+            .review-card {
+                min-width: 280px;
+            }
+        }
+
+        /* Animation Effects */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .marathi-content {
+            display: none;
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-car" style="font-size: 2.5rem; color: var(--primary);"></i>
+                </div>
+                <div class="logo-text">
+                    <h1> माऊली मल्टी सर्व्हिसेस</h1>
+                    <p> Mauli Multiservices - Vehicle Insurance & RTO Services, Latur</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="language-toggle">
+                        <button class="lang-btn active" id="enBtn">EN</button>
+                        <button class="lang-btn" id="mrBtn">मराठी</button>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="animate">
+                <span class="marathi-content">🚗 लातूर मधील सर्वात कमी दरात वाहन इन्शुरन्स!</span>
+                <span class="english-content">🚗 Vehicle Insurance at Lowest Rates in Latur!</span>
+            </h1>
+            <p class="animate delay-1">
+                <span class="english-content">Whether it's a 🏍 Two-Wheeler, 🚗 Four-Wheeler, 🚐 Car, 🚛 Truck, 🚜 Tractor or 🛻 Pick-Up, we offer the lowest premium rates! 🔥</span>
+                <span class="marathi-content">तुमचं वाहन काय आहे? 🏍 2-चाकी | 🚗 4-चाकी | 🚐 कार | 🚛 ट्रक | 🚜 ट्रॅक्टर | 🛻 पिक-अप कोणतेही वाहन असो, आमच्याकडे सर्वात कमी प्रिमियम रेट मिळतील! 🔥</span>
+            </p>
+            <div class="hero-buttons animate delay-2">
+                <a href="#contact" class="btn btn-primary">
+                    <span class="english-content">Get Quote Now</span>
+                    <span class="marathi-content">क्वोट मिळवा</span>
+                </a>
+                <a href="tel:+919765086866" class="btn btn-secondary">
+                    <span class="english-content">Call Now</span>
+                    <span class="marathi-content">कॉल करा</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-item animate">
+                <h3>5000+</h3>
+                <p>
+                    <span class="english-content">Happy Customers</span>
+                    <span class="marathi-content">समाधानी ग्राहक</span>
+                </p>
+            </div>
+            <div class="stat-item animate delay-1">
+                <h3>15+</h3>
+                <p>
+                    <span class="english-content">Years Experience</span>
+                    <span class="marathi-content">वर्षांचा अनुभव</span>
+                </p>
+            </div>
+            <div class="stat-item animate delay-2">
+                <h3>24/7</h3>
+                <p>
+                    <span class="english-content">Customer Support</span>
+                    <span class="marathi-content">ग्राहक सहाय्य</span>
+                </p>
+            </div>
+            <div class="stat-item animate delay-3">
+                <h3>100%</h3>
+                <p>
+                    <span class="english-content">Trusted Service</span>
+                    <span class="marathi-content">विश्वासार्ह सेवा</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Types Section -->
+    <section class="vehicle-types" id="vehicles">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate">
+                    <span class="english-content">Vehicle Types We Cover</span>
+                    <span class="marathi-content">आम्ही कव्हर करतो त्या वाहनांचे प्रकार</span>
+                </h2>
+                <p class="animate delay-1">
+                    <span class="english-content">Comprehensive insurance solutions for all vehicle types</span>
+                    <span class="marathi-content">सर्व प्रकारच्या वाहनांसाठी व्यापक विमा उपाय</span>
+                </p>
+            </div>
+            
+            <div class="vehicles">
+                <div class="vehicle-card animate">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Two-Wheeler</h3>
+                    <p class="marathi">2-चाकी</p>
+                </div>
+                
+                <div class="vehicle-card animate delay-1">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Four-Wheeler</h3>
+                    <p class="marathi">4-चाकी</p>
+                </div>
+                
+                <div class="vehicle-card animate delay-2">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3>Car / Jeep</h3>
+                    <p class="marathi">कार / जीप</p>
+                </div>
+                
+                <div class="vehicle-card animate delay-3">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Truck</h3>
+                    <p class="marathi">ट्रक</p>
+                </div>
+                
+                <div class="vehicle-card animate">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Tractor</h3>
+                    <p class="marathi">ट्रॅक्टर</p>
+                </div>
+                
+                <div class="vehicle-card animate delay-1">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3>Pick-Up</h3>
+                    <p class="marathi">पिक-अप</p>
+                </div>
+            </div>
+            
+            <!-- RTO Symbols -->
+            <div class="rto-symbols">
+                <div class="rto-symbol">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="rto-symbol">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <div class="rto-symbol">
+                    <i class="fas fa-car-alt"></i>
+                </div>
+                <div class="rto-symbol">
+                    <i class="fas fa-road"></i>
+                </div>
+                <div class="rto-symbol">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate">
+                    <span class="english-content">Our Services</span>
+                    <span class="marathi-content">आमच्या सेवा</span>
+                </h2>
+                <p class="animate delay-1">
+                    <span class="english-content">Complete RTO and vehicle documentation services under one roof</span>
+                    <span class="marathi-content">एकाच छताखाली संपूर्ण आरटीओ आणि वाहन दस्तऐवजीकरण सेवा</span>
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">Vehicle Insurance (New/Renewal)</span>
+                        <span class="marathi-content">वाहन विमा (नवीन / नूतनीकरण)</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Get comprehensive insurance for your vehicle at the lowest premium rates with quick processing.</span>
+                        <span class="marathi-content">त्वरीत प्रक्रियेसह सर्वात कमी प्रीमियम दरांवर तुमच्या वाहनासाठी व्यापक विमा मिळवा.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">PUC Certificate</span>
+                        <span class="marathi-content">PUC प्रमाणपत्र</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Pollution Under Control certificate issuance and renewal services.</span>
+                        <span class="marathi-content">प्रदूषण अंकुश प्रमाणपत्र जारीकरण आणि नूतनीकरण सेवा.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">Driving License</span>
+                        <span class="marathi-content">ड्रायव्हिंग लायसन्स</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">New driving license application, renewal, duplicate and other related services.</span>
+                        <span class="marathi-content">नवीन ड्रायव्हिंग लायसन्स अर्ज, नूतनीकरण, डुप्लिकेट आणि इतर संबंधित सेवा.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">All Types of RTO Work</span>
+                        <span class="marathi-content">सर्व प्रकारची RTO कामे</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Complete RTO related documentation and procedural work for vehicles.</span>
+                        <span class="marathi-content">वाहनांसाठी संपूर्ण आरटीओ संबंधित दस्तऐवजीकरण आणि प्रक्रियात्मक काम.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">Vehicle Passing</span>
+                        <span class="marathi-content">वाहन पासिंग</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Vehicle passing and transfer procedures from one state to another.</span>
+                        <span class="marathi-content">एका राज्यातून दुसर्या राज्यात वाहन पासिंग आणि हस्तांतरण प्रक्रिया.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">Tax Payment</span>
+                        <span class="marathi-content">कर भरणे</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Vehicle tax payment, road tax and other related tax services.</span>
+                        <span class="marathi-content">वाहन कर भरणे, रोड टॅक्स आणि इतर संबंधित कर सेवा.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">RC Transfer</span>
+                        <span class="marathi-content">नावांतरण</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Registration Certificate transfer, name change and ownership transfer services.</span>
+                        <span class="marathi-content">नोंदणी प्रमाणपत्र हस्तांतरण, नाव बदल आणि मालकी हस्तांतरण सेवा.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card animate delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="english-content">Vehicle Fitness Certificate</span>
+                        <span class="marathi-content">वाहन फिटनेस प्रमाणपत्र</span>
+                    </h3>
+                    <p>
+                        <span class="english-content">Fitness certificate issuance and renewal for commercial vehicles.</span>
+                        <span class="marathi-content">व्यावसायिक वाहनांसाठी फिटनेस प्रमाणपत्र जारीकरण आणि नूतनीकरण.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate">
+                    <span class="english-content">Why Choose Us?</span>
+                    <span class="marathi-content">आम्हालाच का निवडाव?</span>
+                </h2>
+                <p class="animate delay-1">
+                    <span class="english-content">We provide reliable, fast and efficient services with complete transparency</span>
+                    <span class="marathi-content">आम्ही पूर्ण पारदर्शकतेसह विश्वसनीय, जलद आणि कार्यक्षम सेवा पुरवतो</span>
+                </p>
+            </div>
+            
+            <div class="features">
+                <div class="feature animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>
+                        <span class="english-content">Fast Service</span>
+                        <span class="marathi-content">जलद सेवा</span>
+                    </h4>
+                    <p>
+                        <span class="english-content">Quick completion of work in minimum time with efficient processing.</span>
+                        <span class="marathi-content">कार्यक्षम प्रक्रियेसह कमीत कमी वेळेत कामाचे जलद पूर्ण होणे.</span>
+                    </p>
+                </div>
+                
+                <div class="feature animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>
+                        <span class="english-content">Trusted Process</span>
+                        <span class="marathi-content">विश्वासार्ह प्रक्रिया</span>
+                    </h4>
+                    <p>
+                        <span class="english-content">Original receipts and proofs provided for all transactions with complete transparency.</span>
+                        <span class="marathi-content">सर्व व्यवहारांसाठी मूळ पावती आणि पुरावे पूर्ण पारदर्शकतेसह पुरवले जातात.</span>
+                    </p>
+                </div>
+                
+                <div class="feature animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>
+                        <span class="english-content">Proper Guidance</span>
+                        <span class="marathi-content">योग्य मार्गदर्शन</span>
+                    </h4>
+                    <p>
+                        <span class="english-content">Assistance at every step with expert advice and proper documentation guidance.</span>
+                        <span class="marathi-content">तज्ञ सल्ला आणि योग्य दस्तऐवजीकरण मार्गदर्शनासह प्रत्येक टप्प्यावर मदत.</span>
+                    </p>
+                </div>
+                
+                <div class="feature animate delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h4>
+                        <span class="english-content">Special Discount</span>
+                        <span class="marathi-content">स्पेशल डिस्काउंट</span>
+                    </h4>
+                    <p>
+                        <span class="english-content">Lower rates with more benefits and special discounts for regular customers.</span>
+                        <span class="marathi-content">नियमित ग्राहकांसाठी अधिक फायदे आणि विशेष सवलतींसह कमी दर.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate">
+                    <span class="english-content">Customer Reviews</span>
+                    <span class="marathi-content">ग्राहक प्रतिक्रिया</span>
+                </h2>
+                <p class="animate delay-1">
+                    <span class="english-content">What our customers say about our services</span>
+                    <span class="marathi-content">आमच्या ग्राहकांनी आमच्या सेवांबद्दल काय म्हटले आहे</span>
+                </p>
+            </div>
+            
+            <div class="review-slider" id="reviewSlider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>राजेश पाटील</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="marathi"> माऊली मल्टी सर्व्हिसेस कडून माझ्या कारचे विमा नूतनीकरण केले. खूप जलद सेवा आणि सर्वात कमी दर मिळाले. खरोखरच समाधानी आहे.</p>
+                    <p class="english">Renewed my car insurance from Mauli Multiservices. Got very fast service and the lowest rates. Really satisfied.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>सुनिता देशमुख</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="marathi">नवीन ड्रायव्हिंग लायसन्ससाठी त्यांची सेवा घेतली. प्रत्येक चरणी योग्य मार्गदर्शन मिळाले. फार छान अनुभव.</p>
+                    <p class="english">Took their service for a new driving license. Got proper guidance at every step. Very nice experience.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>विक्रम शिंदे</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="marathi">ट्रकसाठी आरसी ट्रान्सफर आणि कर भरण्याचे काम केले. सगळे काम वेळेत पूर्ण झाले. खूप छान सेवा.</p>
+                    <p class="english">Got RC transfer and tax payment done for my truck. All work completed on time. Very good service.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>प्रवीण जाधव</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="marathi">15 वर्षांपासून मी माझ्या सर्व वाहनांचे विमा त्यांच्याकडून करतो आहे. नेहमी विश्वासार्ह सेवा आणि चांगले दर.</p>
+                    <p class="english">For 15 years I have been getting insurance for all my vehicles from them. Always reliable service and good rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animate">
+                    <span class="english-content">Contact Us</span>
+                    <span class="marathi-content">आमच्याशी संपर्क साधा</span>
+                </h2>
+                <p class="animate delay-1">
+                    <span class="english-content">Get in touch with us for all your vehicle insurance and RTO needs</span>
+                    <span class="marathi-content">तुमच्या सर्व वाहन विमा आणि आरटीओ गरजांसाठी आमच्याशी संपर्क साधा</span>
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info animate">
+                    <h3>
+                        <span class="english-content">Our Address</span>
+                        <span class="marathi-content">आमचा पत्ता</span>
+                    </h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>
+                                <span class="english-content">Office Address</span>
+                                <span class="marathi-content">कार्यालयाचा पत्ता</span>
+                            </h4>
+                            <p> Mauli Multiservices<br>Near RTO Office, Latur<br>Maharashtra, India - 413512</p>
+                            <p class="marathi"> माऊली मल्टी सर्व्हिसेस<br>आरटीओ कार्यालय जवळ, लातूर<br>महाराष्ट्र, भारत - 413512</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>
+                                <span class="english-content">Phone Number</span>
+                                <span class="marathi-content">फोन नंबर</span>
+                            </h4>
+                            <p>+91 97650 86866</p>
+                            <p>Mon-Sun: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email ID</h4>
+                            <p>platur7@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>
+                                <span class="english-content">Working Hours</span>
+                                <span class="marathi-content">कार्याचे तास</span>
+                            </h4>
+                            <p>Monday - Sunday: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate delay-1">
+                    <h3>
+                        <span class="english-content">Get a Free Quote</span>
+                        <span class="marathi-content">मोफत क्वोट मिळवा</span>
+                    </h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <span class="english-content">Full Name</span>
+                                <span class="marathi-content">पूर्ण नाव</span>
+                            </label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">
+                                <span class="english-content">Phone Number</span>
+                                <span class="marathi-content">फोन नंबर</span>
+                            </label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vehicle">
+                                <span class="english-content">Vehicle Type</span>
+                                <span class="marathi-content">वाहन प्रकार</span>
+                            </label>
+                            <select id="vehicle" class="form-control" required>
+                                <option value="">Select Vehicle Type</option>
+                                <option value="two-wheeler">Two-Wheeler (2-चाकी)</option>
+                                <option value="four-wheeler">Four-Wheeler (4-चाकी)</option>
+                                <option value="car">Car/Jeep (कार/जीप)</option>
+                                <option value="truck">Truck (ट्रक)</option>
+                                <option value="tractor">Tractor (ट्रॅक्टर)</option>
+                                <option value="pickup">Pick-Up (पिक-अप)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">
+                                <span class="english-content">Service Required</span>
+                                <span class="marathi-content">आवश्यक सेवा</span>
+                            </label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select Service</option>
+                                <option value="insurance">Vehicle Insurance (वाहन विमा)</option>
+                                <option value="puc">PUC Certificate (PUC प्रमाणपत्र)</option>
+                                <option value="license">Driving License (ड्रायव्हिंग लायसन्स)</option>
+                                <option value="rto">RTO Work (आरटीओ काम)</option>
+                                <option value="transfer">RC Transfer (आरसी ट्रान्सफर)</option>
+                                <option value="tax">Tax Payment (कर भरणे)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <span class="english-content">Submit Request</span>
+                            <span class="marathi-content">विनंती सबमिट करा</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>एकदा माऊली मल्टी सर्व्हिसेस</h3>
+                    <p>
+                        <span class="english-content">Your trusted partner for all vehicle insurance and RTO services in Latur.</span>
+                        <span class="marathi-content">लातूर मधील सर्व वाहन विमा आणि आरटीओ सेवांसाठी तुमचा विश्वासार्ह भागीदार.</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919765086866" class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="tel:+919765086866" class="social-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>
+                        <span class="english-content">Quick Links</span>
+                        <span class="marathi-content">द्रुत दुवे</span>
+                    </h4>
+                    <ul>
+                        <li><a href="#home">
+                            <span class="english-content">Home</span>
+                            <span class="marathi-content">मुख्यपृष्ठ</span>
+                        </a></li>
+                        <li><a href="#services">
+                            <span class="english-content">Services</span>
+                            <span class="marathi-content">सेवा</span>
+                        </a></li>
+                        <li><a href="#vehicles">
+                            <span class="english-content">Vehicles</span>
+                            <span class="marathi-content">वाहने</span>
+                        </a></li>
+                        <li><a href="#why-us">
+                            <span class="english-content">Why Choose Us</span>
+                            <span class="marathi-content">आम्हालाच का</span>
+                        </a></li>
+                        <li><a href="#contact">
+                            <span class="english-content">Contact</span>
+                            <span class="marathi-content">संपर्क</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>
+                        <span class="english-content">Our Services</span>
+                        <span class="marathi-content">आमच्या सेवा</span>
+                    </h4>
+                    <ul>
+                        <li><a href="#">
+                            <span class="english-content">Vehicle Insurance</span>
+                            <span class="marathi-content">वाहन विमा</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="english-content">Driving License</span>
+                            <span class="marathi-content">ड्रायव्हिंग लायसन्स</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="english-content">PUC Certificate</span>
+                            <span class="marathi-content">PUC प्रमाणपत्र</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="english-content">RC Transfer</span>
+                            <span class="marathi-content">नावांतरण</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="english-content">Tax Payment</span>
+                            <span class="marathi-content">कर भरणे</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>
+                    <span class="english-content">© 2023 Mauli Multiservices. All Rights Reserved. | Latur, Maharashtra, India</span>
+                    <span class="marathi-content">© 2023 माऊली मल्टी सर्व्हिसेस. सर्व हक्क राखीव. | लातूर, महाराष्ट्र, भारत</span>
+                </p>
+                <p>
+                    <span class="english-content">Website Designed for Vehicle Insurance & RTO Services</span>
+                    <span class="marathi-content">वाहन विमा आणि आरटीओ सेवांसाठी डिझाइन केलेली वेबसाइट</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919765086866" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919765086866" class="floating-btn call-btn">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <button class="floating-btn call-btn" id="chatbotBtn" style="background-color: var(--accent);">
+            <i class="fas fa-robot"></i>
+        </button>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div class="ai-chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <h4>
+                <span class="english-content">AI Assistant - Vehicle Insurance Help</span>
+                <span class="marathi-content">AI सहाय्यक - वाहन विमा मदत</span>
+            </h4>
+            <button class="close-chatbot" id="closeChatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-message bot-message">
+                <span class="english-content">Hello! I'm your AI assistant for vehicle insurance and RTO services. How can I help you today?</span>
+                <span class="marathi-content">नमस्कार! मी वाहन विमा आणि आरटीओ सेवांसाठी तुमचा AI सहाय्यक आहे. मी आज तुम्हाला कशी मदत करू शकतो?</span>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Language Toggle
+        const enBtn = document.getElementById('enBtn');
+        const mrBtn = document.getElementById('mrBtn');
+        const englishContent = document.querySelectorAll('.english-content');
+        const marathiContent = document.querySelectorAll('.marathi-content');
+        
+        enBtn.addEventListener('click', () => {
+            enBtn.classList.add('active');
+            mrBtn.classList.remove('active');
+            
+            englishContent.forEach(el => el.style.display = 'inline');
+            marathiContent.forEach(el => el.style.display = 'none');
+        });
+        
+        mrBtn.addEventListener('click', () => {
+            mrBtn.classList.add('active');
+            enBtn.classList.remove('active');
+            
+            englishContent.forEach(el => el.style.display = 'none');
+            marathiContent.forEach(el => el.style.display = 'inline');
+        });
+        
+        // Form Submission
+        const quoteForm = document.getElementById('quoteForm');
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const vehicle = document.getElementById('vehicle').value;
+            const service = document.getElementById('service').value;
+            
+            // Create WhatsApp message
+            const message = `Hello, I'm interested in getting a quote for ${service} for my ${vehicle}. My name is ${name} and my phone number is ${phone}.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/919765086866?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            quoteForm.reset();
+            
+            // Show confirmation
+            alert(enBtn.classList.contains('active') 
+                ? 'Thank you! You will be redirected to WhatsApp to complete your request.' 
+                : 'धन्यवाद! तुमची विनंती पूर्ण करण्यासाठी तुम्हाला WhatsApp वर पुनर्निर्देशित केले जाईल.');
+        });
+        
+        // AI Chatbot
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbot = document.getElementById('chatbot');
+        const closeChatbot = document.getElementById('closeChatbot');
+        const sendChatBtn = document.getElementById('sendChatBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatbotBody = document.getElementById('chatbotBody');
+        
+        chatbotBtn.addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            setTimeout(() => {
+                chatInput.focus();
+            }, 100);
+        });
+        
+        closeChatbot.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+        });
+        
+        // Chatbot responses
+        const chatbotResponses = {
+            english: {
+                greeting: "Hello! I'm your AI assistant for vehicle insurance and RTO services. How can I help you today?",
+                insurance: "We offer comprehensive vehicle insurance for all types of vehicles at the lowest premium rates in Latur. Would you like a quote?",
+                license: "We provide complete driving license services including new applications, renewals, and duplicates. What specific help do you need?",
+                puc: "We can help you get a Pollution Under Control (PUC) certificate quickly. Do you need a new certificate or renewal?",
+                rto: "We handle all types of RTO work including registration, transfer, and other documentation. Please specify your requirement.",
+                contact: "You can contact us at +91 97650 86866, visit our office near RTO Latur, or email us at platur7@gmail.com.",
+                thanks: "You're welcome! Feel free to ask if you have any other questions.",
+                default: "I can help you with vehicle insurance, driving license, PUC certificate, RC transfer, tax payment and other RTO services. What specifically are you looking for?"
+            },
+            marathi: {
+                greeting: "नमस्कार! मी वाहन विमा आणि आरटीओ सेवांसाठी तुमचा AI सहाय्यक आहे. मी आज तुम्हाला कशी मदत करू शकतो?",
+                insurance: "आम्ही लातूर मध्ये सर्व प्रकारच्या वाहनांसाठी सर्वात कमी प्रीमियम दरांवर व्यापक वाहन विमा ऑफर करतो. तुम्हाला क्वोट हवा आहे का?",
+                license: "आम्ही नवीन अर्ज, नूतनीकरण आणि डुप्लिकेट्स यासह संपूर्ण ड्रायव्हिंग लायसन्स सेवा पुरवतो. तुम्हाला कोणती विशिष्ट मदत हवी आहे?",
+                puc: "आम्ही तुम्हाला पॉल्यूशन अंकुश (PUC) प्रमाणपत्र पटकन मिळविण्यात मदत करू शकतो. तुम्हाला नवीन प्रमाणपत्र किंवा नूतनीकरण हवे आहे?",
+                rto: "आम्ही नोंदणी, हस्तांतरण आणि इतर दस्तऐवजीकरण यासह सर्व प्रकारची आरटीओ कामे हाताळतो. कृपया तुमची आवश्यकता नमूद करा.",
+                contact: "तुम्ही आमच्याशी +91 97650 86866 वर संपर्क साधू शकता, आरटीओ लातूर जवळ आमच्या कार्यालयाला भेट देऊ शकता किंवा platur7@gmail.com वर ईमेल पाठवू शकता.",
+                thanks: "आपले स्वागत आहे! तुमच्याकडे इतर काही प्रश्न असल्यास मोकळ्या मनाने विचारा.",
+                default: "मी तुम्हाला वाहन विमा, ड्रायव्हिंग लायसन्स, PUC प्रमाणपत्र, RC हस्तांतरण, कर भरणे आणि इतर आरटीओ सेवांमध्ये मदत करू शकतो. तुम्हाला विशेषत: काय शोधत आहात?"
+            }
+        };
+        
+        function addChatMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+            
+            const isMarathi = mrBtn.classList.contains('active');
+            const contentSpan = document.createElement('span');
+            contentSpan.className = isMarathi ? 'marathi-content' : 'english-content';
+            contentSpan.textContent = message;
+            contentSpan.style.display = 'inline';
+            
+            // Hide the other language
+            const otherSpan = document.createElement('span');
+            otherSpan.className = isMarathi ? 'english-content' : 'marathi-content';
+            otherSpan.style.display = 'none';
+            
+            messageDiv.appendChild(contentSpan);
+            messageDiv.appendChild(otherSpan);
+            
+            chatbotBody.appendChild(messageDiv);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+        
+        function getBotResponse(userMessage) {
+            const isMarathi = mrBtn.classList.contains('active');
+            const responses = isMarathi ? chatbotResponses.marathi : chatbotResponses.english;
+            
+            const lowerMessage = userMessage.toLowerCase();
+            
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('नमस्कार') || lowerMessage.includes('हॅलो')) {
+                return responses.greeting;
+            } else if (lowerMessage.includes('insurance') || lowerMessage.includes('विमा')) {
+                return responses.insurance;
+            } else if (lowerMessage.includes('license') || lowerMessage.includes('लायसन्स')) {
+                return responses.license;
+            } else if (lowerMessage.includes('puc') || lowerMessage.includes('पीयूसी')) {
+                return responses.puc;
+            } else if (lowerMessage.includes('rto') || lowerMessage.includes('आरटीओ')) {
+                return responses.rto;
+            } else if (lowerMessage.includes('contact') || lowerMessage.includes('संपर्क') || lowerMessage.includes('पत्ता') || lowerMessage.includes('number') || lowerMessage.includes('नंबर')) {
+                return responses.contact;
+            } else if (lowerMessage.includes('thank') || lowerMessage.includes('धन्यवाद')) {
+                return responses.thanks;
+            } else {
+                return responses.default;
+            }
+        }
+        
+        sendChatBtn.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if (message) {
+                addChatMessage(message, true);
+                chatInput.value = '';
+                
+                // Simulate AI thinking
+                setTimeout(() => {
+                    const botResponse = getBotResponse(message);
+                    addChatMessage(botResponse, false);
+                }, 800);
+            }
+        });
+        
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatBtn.click();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(elementPosition < screenPosition) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Initialize with English content
+        window.addEventListener('DOMContentLoaded', () => {
+            englishContent.forEach(el => el.style.display = 'inline');
+            marathiContent.forEach(el => el.style.display = 'none');
+        });
+    </script>
+</body>
+</html>
